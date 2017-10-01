@@ -6,7 +6,7 @@
 /*   By: ttshivhu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/30 13:00:24 by ttshivhu          #+#    #+#             */
-/*   Updated: 2017/07/30 14:12:05 by ttshivhu         ###   ########.fr       */
+/*   Updated: 2017/10/01 11:07:28 by ttshivhu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ int			ft_parse_check(char *str)
 static char	*ft_start(void)
 {
 	char	*input;
+
 	display_prompt();
 	input = ft_read();
 	input = d_quote(input);
