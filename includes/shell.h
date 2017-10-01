@@ -6,7 +6,7 @@
 /*   By: ttshivhu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/30 13:00:38 by ttshivhu          #+#    #+#             */
-/*   Updated: 2017/10/01 10:33:45 by ttshivhu         ###   ########.fr       */
+/*   Updated: 2017/10/01 13:42:08 by ttshivhu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@
 # include "../src/ft_read/line.h"
 # define BUFF_SIZE 1024
 # define CLEAR "\e[1;1H\e[2J"
-# define SETENV_SYNTAX "\e[0;1m\e[0;32msyntax error: [Key] = [Value]\e[0;0m"
+# define SETENV_SYNTAX "\e[0;1m\e[0;32msyntax error: [Key] [Value]\e[0;0m"
 # define ENV_ERROR_1 "\e[0;31mNot found , try [setenv]\e[1;0m"
 # define FILE_IN 1
 # define FILE_OUT 2

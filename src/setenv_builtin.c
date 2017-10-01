@@ -6,7 +6,7 @@
 /*   By: ttshivhu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/30 12:59:56 by ttshivhu          #+#    #+#             */
-/*   Updated: 2017/08/16 14:44:42 by ttshivhu         ###   ########.fr       */
+/*   Updated: 2017/10/01 13:41:10 by ttshivhu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,11 +76,11 @@ void		set_env(char *key, char *value)
 int			exec_command_setenv(char **s_env_str)
 {
 	if (!s_env_str[1] || !s_env_str[2] || !ft_isprint_str(s_env_str[1])
-	|| ft_strcmp(s_env_str[2], "=") || !ft_isprint_str(s_env_str[3]))
+		|| !ft_isprint_str(s_env_str[2]))
 	{
 		ft_putendl(SETENV_SYNTAX);
 		return (1);
 	}
-	set_env(s_env_str[1], s_env_str[3]);
+	set_env(s_env_str[1], s_env_str[2]);
 	return (1);
 }
