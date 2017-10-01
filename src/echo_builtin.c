@@ -6,7 +6,7 @@
 /*   By: ttshivhu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/30 12:59:43 by ttshivhu          #+#    #+#             */
-/*   Updated: 2017/07/30 12:59:46 by ttshivhu         ###   ########.fr       */
+/*   Updated: 2017/10/01 13:17:39 by ttshivhu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,8 @@ int			exec_command_echo(char **line)
 				ft_putchar(line[i][j]);
 			j++;
 		}
-		ft_putchar(' ');
+		if (line[i][0] != '\n')
+			ft_putchar(' ');
 		i++;
 	}
 	ft_putchar('\n');
