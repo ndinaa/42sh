@@ -6,7 +6,7 @@
 /*   By: ttshivhu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/14 14:37:46 by ttshivhu          #+#    #+#             */
-/*   Updated: 2017/08/16 14:49:41 by ttshivhu         ###   ########.fr       */
+/*   Updated: 2017/10/01 13:31:00 by ttshivhu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,17 @@ void		exec_cd(char *dir, int old_pwd_bool)
 	}
 }
 
+static void	telda(char *dir, char *home)
+{
+	char	*temp;
+
+	temp = ft_strchr(dir, '~');
+	home = ft_strjoin(home, "/");
+	home = ft_strjoin(home, temp + 1);
+	exec_cd(home, 0);
+	free(temp);
+}
+
 int			exec_command_cd(char **dir)
 {
 	char	*home;
@@ -58,6 +69,8 @@ int			exec_command_cd(char **dir)
 		exec_cd(home, 1);
 		return (1);
 	}
+	else if (dir[1][0] == '~')
+		telda(dir[1], home);
 	else
 		exec_cd(dir[1], 0);
 	return (1);
